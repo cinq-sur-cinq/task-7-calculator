@@ -43,6 +43,8 @@ def test_arithmetic(expression, expected):
         ("-inf * -2", math.inf),
         ("(-inf)^3", -math.inf),
         ("2^inf", math.inf),
+        ("inf^0", 1.0),
+        ("(-inf)**0", 1.0),
         ("0^-inf", math.inf),
         ("(-0)^-3", -math.inf),
         ("(-2)^1025", -math.inf),

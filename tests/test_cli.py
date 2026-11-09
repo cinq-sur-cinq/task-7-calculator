@@ -2,7 +2,7 @@ from src.calculator.__main__ import main
 
 
 def test_session_keeps_the_last_successful_result(monkeypatch, capsys):
-    lines = iter(["_", "2 + 3", "2 +", "", "_ * 4", "0/0", "_ + 1"])
+    lines = iter(["_", "2 + 3", "2 +", "", "_ * 4", "0/0", "_ + 1", "1 / -inf", "1 / _"])
 
     def read_line(prompt):
         try:
@@ -20,5 +20,7 @@ def test_session_keeps_the_last_successful_result(monkeypatch, capsys):
         "20.0",
         "nan",
         "nan",
+        "0.0",
+        "-inf",
         "",
     ]

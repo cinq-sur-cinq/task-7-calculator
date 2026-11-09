@@ -19,7 +19,7 @@ def main() -> None:
         except ValueError as error:
             print(f"Error: {error}")
         else:
-            print(result)
+            print(0.0 if result == 0.0 else result)
             previous = result
 
 
